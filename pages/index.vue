@@ -43,7 +43,7 @@
         </div>
     </main>
     <FooterSecond/>
-    <div class="grid justify-center items-center mt-[200px]">
+    <div id="mobileTo" class="grid justify-center items-center mt-[200px]">
         <h1 class="text-center">Click the button below to view on your phone!</h1>
         <nuxt-link to="/mobile" class="text-center mt-10 p-2 px-4 bg-teal-500 rounded-xl text-white">Mobile version</nuxt-link>
     </div>
@@ -69,12 +69,18 @@
     #requests{
         background-image: url('../public/bgImage.png');
     }
+    #mobileTo{
+        display: none
+    }
     @media (max-width: 767px) {
         .container{
             display: none;
         }
         FooterSecond{
             display: none;
+        }
+        #mobileTo{
+            display: grid
         }
     }
     
